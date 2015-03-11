@@ -116,7 +116,7 @@ public class SnappyDecompressor implements Decompressor {
     return finished && !outputBuffer.hasRemaining();
   }
 
-  @Override
+  // @Override
   public int getRemaining() {
     return 0;
   }

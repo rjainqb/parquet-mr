@@ -136,7 +136,7 @@ public class SnappyCompressor implements Compressor {
     return !finishCalled;
   }
 
-  @Override
+  // @Override
   public void reinit(Configuration c) {
     reset();		
   }

@@ -225,7 +225,7 @@ public class TestDeprecatedParquetOuputFormat extends TestCase {
       throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
+    // @Override
     public float getProgress() {
       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
