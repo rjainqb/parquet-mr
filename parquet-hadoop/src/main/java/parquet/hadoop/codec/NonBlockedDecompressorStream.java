@@ -18,6 +18,7 @@ package parquet.hadoop.codec;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.apache.hadoop.io.compress.CodecPrematureEOFException;
 import org.apache.hadoop.io.compress.Decompressor;
 import org.apache.hadoop.io.compress.DecompressorStream;
 
@@ -38,9 +39,11 @@ public class NonBlockedDecompressorStream extends DecompressorStream {
 	if (!inputHandled) {
 	  // Send all the compressed input to the decompressor.
 	  while (true) {
-		int compressedBytes = getCompressedData();
-		if (compressedBytes == -1) break;
-		decompressor.setInput(buffer, 0, compressedBytes);
+        try {
+          getCompressedData();
+        } catch (CodecPrematureEOFException cpeofe) {
+          break;
+        }
 	  }
 	  inputHandled = true;
 	}
