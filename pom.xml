@@ -93,7 +93,7 @@
 
   <modules>
     <module>parquet-avro</module>
-    <module>parquet-cascading</module>
+    <!-- <module>parquet-cascading</module> -->
     <module>parquet-column</module>
     <module>parquet-common</module>
     <module>parquet-encoding</module>
@@ -103,8 +103,8 @@
     <module>parquet-pig</module>
     <module>parquet-pig-bundle</module>
     <module>parquet-protobuf</module>
-    <module>parquet-scrooge</module>
-    <module>parquet-thrift</module>
+    <!-- <module>parquet-scrooge</module> -->
+    <!-- <module>parquet-thrift</module> -->
     <module>parquet-test-hadoop2</module>
     <module>parquet-hadoop-bundle</module>
     <module>parquet-hive</module>
